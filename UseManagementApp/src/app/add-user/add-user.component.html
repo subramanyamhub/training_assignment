@@ -1,0 +1,54 @@
+<br/><br/>
+<div class="col-md-6 col-md-offset-2">
+  <h2>Add User</h2>
+  <br/>
+  <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+
+    <div class="form-group">
+      <label for="UserId">User ID:</label>
+      <input formControlName="User ID" placeholder="User ID" name="User ID" class="form-control" id="User ID">
+      <div *ngIf="submitted && addForm".controls.User ID.errors class="error">
+        <div class="text-danger" *ngIf="addForm".controls.User ID.errors.required>User ID is required</div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="UserAddress">UserAddress:</label>
+      <input formControlName="UserAddress" placeholder="UserAddress" name="UserAddress" class="form-control" id="UserAddress">
+      <div *ngIf="submitted && addForm".controls.UserAddress.errors class="error">
+        <div class="text-danger" *ngIf="addForm".controls.UserAddress.errors.required>UserAddress is required</div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="UserPhNo">UserPhNo:</label>
+      <input formControlName="UserPhNo" placeholder="UserPhNo" name="UserPhNo" class="form-control" id="UserPhNo">
+      <div *ngIf="submitted && addForm".controls.UserPhNo.errors class="error">
+        <div class="text-danger" *ngIf="addForm".controls.UserPhNo.errors.required>UserPhNo is required</div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="UserEmail">UserEmail:</label>
+      <input type="email" formControlName="UserEmail" placeholder="Email" name="UserEmail" class="form-control" id="email">
+      <div *ngIf="submitted && addForm".controls.email.errors class="error">
+        <div class="text-danger" *ngIf="addForm".controls.email.errors.required>Email is required</div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="UserPassword">UserPassword:</label>
+      <input type="text" formControlName="UserPassword" placeholder="UserPassword" name="UserPassword" class="form-control" id="UserPassword">
+      <div *ngIf="submitted && addForm".controls.email.errors class="error">
+        <div class="text-danger" *ngIf="addForm".controls.UserPassword.errors.required>UserPassword is required</div>
+      </div>
+    </div>
+    
+    <button class="btn btn-success">Save</button>&nbsp; &nbsp;
+    <button class="btn btn-danger" type="reset">Cancel</button>
+&nbsp; &nbsp;
+    <a class="btn btn-warning" href="/list-user">Back to List</a> 
+
+    <br/><br/>
+  </form>
+</div>
